@@ -12,9 +12,8 @@
 
             }
         })
-        if(window.innerWidth > 768){
- setInterval(()=>{
-  if(window.pageYOffset > 50){
+setInterval(()=>{
+  if(window.scrollY > 0){
     document.querySelector(".swiper-btn").style.display = "none"
             }
             else{
@@ -22,9 +21,29 @@
                   document.querySelector(".swiper-btn").style.display = "flex"
             }
  },10)
-        }
- gsap.registerPlugin(ScrollTrigger)
  
+ gsap.registerPlugin(ScrollTrigger)
+ gsap.from("#skill",{
+  scrollTrigger:{
+    trigger:".skill-cont",
+    starrt:"bottom bottom",
+    toggleActions:"play reverse play reverse"
+  },
+  opacity:0,
+  stagger:0.3,
+  starrt:"bottom bottom",
+  x:20,y:20})
+  gsap.from("#top-skills",{
+    scrollTrigger:{
+      trigger:".skill-cont",
+      starrt:"bottom bottom",
+      toggleActions:"play reverse play reverse"
+    },
+    opacity:0,
+    duration:1,
+    stagger:0.3,
+    starrt:"bottom bottom",
+    x:100})
   gsap.from("#social",{
   scrollTrigger:{
     trigger:".social-cont",
@@ -34,9 +53,23 @@
   },
   x:1000,
           duration:1,
-          stagger:0.3
+          stagger:0.3,
+
         })
-        
+        gsap.from("#social",{
+          scrollTrigger:{
+            trigger:".social-cont",
+            starrt:"bottom bottom",
+            toggleActions:"play reverse play reverse"
+          },       repeat:-1,
+          y:10,
+          yoyo:true,
+          duration:0.5,
+    
+                  stagger:0.15,
+                  
+                })
+
 gsap.from(".hero-btn-1",{
 
 
@@ -132,37 +165,7 @@ else{
   y:100,   
   })
 }
-if(window.innerWidth > 1024){
-  gsap.from("#services",{
-    scrollTrigger : {
 
-      pin:true,
-      scrub:1,
-      toggleActions :"play play ",
-      start : "center center",
-      trigger : "#services-grid"
-    },
-    x:400,
-    stagger:0.4,
-    rotateY:"160",
-opacity:0,
-  }) 
-}
-else{
-  gsap.from("#services",{
-    scrollTrigger : {
-      start : "top center",
-      toggleActions :"play",
-      trigger : "#services-grid",
-      toggleActions:"play reverse play reverse"
-    },
-    x:200,
-rotateY :160,
-    opacity:0,
-    ease: "power1.out"
-  })
-  
-}
 const skyElement = Array.from(document.getElementsByClassName('sky-background'));
 const skyPanels = 3;
 const fps = 30;
@@ -336,3 +339,161 @@ gsap.from("#footer-child",{
   stagger:0.3,
   x:-100
 })
+gsap.from(".data-card-1",{
+            scrollTrigger:{
+              trigger:".data-card-1",
+              toggleActions:"play reverse play reverse"
+            }, 
+            opacity:0,
+            duration:1,
+            start:"top center",
+            ease: "power1.out",
+            x:-100,
+          })
+          gsap.from(".data-card-2",{
+            scrollTrigger:{
+              trigger:".data-card-2",
+              toggleActions:"play reverse play reverse"
+            }, 
+            opacity:0,
+            duration:1,
+            start:"top center",
+            ease: "power1.out",
+            x:100,
+          })
+          gsap.from(".data-card-3",{
+            scrollTrigger:{
+              trigger:".data-card-3",
+              toggleActions:"play reverse play reverse"
+            }, 
+            opacity:0,
+            duration:1,
+            start:"top center",
+            ease: "power1.out",
+            x:-100,
+          })
+          gsap.from(".data-card-4",{
+            scrollTrigger:{
+              trigger:".data-card-4",
+              toggleActions:"play reverse play reverse"
+            }, 
+            opacity:0,
+            duration:1,
+            start:"top center",
+            ease: "power1.out",
+            x:100,
+          })
+          gsap.from(".data-card-5",{
+            scrollTrigger:{
+              trigger:".data-card-5",
+              toggleActions:"play reverse play reverse"
+            }, 
+            opacity:0,
+            duration:1,
+            start:"top center",
+            ease: "power1.out",
+            x:-100,
+          })
+          gsap.from(".data-card-6",{
+            scrollTrigger:{
+              trigger:".data-card-6",
+              toggleActions:"play reverse play reverse"
+            }, 
+            opacity:0,
+            duration:1,
+            start:"top center",
+            ease: "power1.out",
+            x:100,
+          })
+          gsap.from('.kaggle',{
+            scrollTrigger:{
+              trigger:"#kaggle-cont",
+              toggleActions:"play reverse play reverse"
+            },
+            duration:1,
+            opacity:0,
+            // x:30,
+            y:30,
+          })
+  
+          gsap.from('.wave-1',{
+            duration:2,
+            stagger:1,
+            delay:0,
+            yoyo:true,
+            toggleActions:"play reverse play reverse",
+            repeat:-1,
+            opacity:0,
+          })
+          gsap.from('.wave-2',{
+            duration:2,
+            stagger:1,
+            delay:1,
+            yoyo:true,
+            toggleActions:"play reverse play reverse",
+            repeat:-1,
+            opacity:0,
+          })
+          gsap.from('.wave-3',{
+            duration:2,
+            stagger:1,
+            delay:2,
+            yoyo:true,
+            toggleActions:"play reverse play reverse",
+            repeat:-1,
+            opacity:0,
+          })
+          gsap.from('.foot-title',{
+            scrollTrigger:{
+             trigger:'.footer',
+              toggleActions:"play reverse play reverse",
+            }, 
+            opacity:0,
+            stagger:0.5,
+            duration:2,
+            ease: "power1.out",
+            y:50,
+          })
+          gsap.from(".social-f-f",{
+            scrollTrigger:{
+              trigger:'.footer',
+               toggleActions:"play reverse play reverse",
+             }, 
+             opacity:0,
+             stagger:0.5,
+             duration:0.5,
+             delay:2,
+             ease: "power1.out",
+             y:50,
+          })
+    if(window.innerWidth>768){
+      gsap.from(".flip-card",{
+        scrollTrigger:{
+          trigger:'.flip-grid',
+           toggleActions:"play reverse play reverse",
+         }, 
+         opacity:0,
+         stagger:0.25,
+         duration:1,
+         ease: "power1.out",
+         y:-700,
+         x:-400,
+        //  x:50,
+         rotateX:-200,
+         skewX:-100,
+         rotateY:-100,
+      })
+    }
+    else{
+      gsap.from(".flip-card",{
+        scrollTrigger:{
+          trigger:'.flip-grid',
+           toggleActions:"play reverse play reverse",
+         }, 
+         opacity:0,
+         stagger:0.25,
+         duration:1,
+         ease: "power1.out",
+   y:400,
+      })
+    }

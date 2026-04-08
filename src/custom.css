@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 html{
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   font-family: poppins;
   background-color: #000036;
-}nav{
-  transition: all ease 0.4s;
+
 }
+
 .title{
   animation-name: title;
   white-space: nowrap;
@@ -25,12 +25,13 @@ html{
     width: 140%;
   }
 }
-body,html{
-  overflow-x:hidden !important
+html{
+  overflow-x: hidden;
 }
-
-
 /* Preloader */
+body{
+overflow: hidden;
+}
 
 .preloader{
   position: relative;
@@ -241,7 +242,115 @@ main {
 @-moz-keyframes rocket-movement { 100% {-moz-transform: translate(1200px,-600px);} }
 @-webkit-keyframes rocket-movement {100% {-webkit-transform: translate(1200px,-600px); } }
 @keyframes rocket-movement { 100% {transform: translate(1200px,-600px);} }
-#project:hover{
-transform: rotateY(100px);
-}
+
 /* Parrallax */
+
+
+.wave-1{
+  position: absolute;
+  width: 50%;
+  bottom:0;
+  left:0% ;
+  border-radius: 1000px 700px 0px 0px;
+  height: 295px;
+  z-index: -1;
+  opacity: 0.5;
+  background-color: #7562E0;
+}
+.wave-2{
+  position: absolute;
+  width: 50%;
+  bottom:0;
+  left:33% ;
+  z-index: -1;
+  border-radius: 300px 400px 0px 0px;
+  height: 295px;
+  opacity: 0.5;
+  background-color: #7562E0;
+}
+.wave-3{
+  position: absolute;
+  width: 50%;
+  border-radius: 700px 1000px 0px 0px;
+  height: 295px;
+  left:66% ;
+  z-index: -1;
+  bottom:0;
+  opacity: 0.5;
+  background-color: #7562E0;
+}
+@media (max-width:650px) {
+ .wave{
+  width:70%
+ } 
+ .wave-1{
+  left:-30%;
+
+ }
+}
+/* Grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust as per your layout */
+  gap: 20px; /* Adjust spacing between cards */
+}
+
+/* Flip card base styles */
+.flip-card {
+  perspective: 1000px; /* Enable 3D effect */
+}
+
+/* Inner part of the flip card */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* Front of the flip card */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px;
+  backface-visibility: hidden; /* Hide back side until flip */
+}
+
+
+/* Styling for the back side */
+.flip-card-back {
+  transform: rotateY(180deg); /* Initially flipped */
+  /* Back side styles */
+}
+
+/* Flip animation on hover */
+@media (max-width:768px){
+  .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .hover-t{
+    display:none;
+  }
+}
+@media (min-width:769px){
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .hover-t{
+    animation-name: blur;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+  }
+}
+@keyframes blur {
+  to{
+    opacity: 0.2;
+  }
+}
