@@ -739,83 +739,213 @@ tailwind.config = {
 </section>
 
 <!-- ══════════════════ SERVICES ══════════════════ -->
-<section id="services" class="py-24 md:py-32 bg-slate-50 border-y border-slate-200">
+<section id="services" class="py-24 md:py-32 bg-slate-50 border-y border-slate-200" aria-labelledby="services-heading" itemscope itemtype="https://schema.org/ItemList">
+  <meta itemprop="name" content="Web Development, AI & Backend Services" />
+  <meta itemprop="description" content="Freelance web development, AI chatbot, API/backend, CRM automation, and data dashboard services by Moazzam Ali — Lahore, Pakistan." />
+
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
 
-    <div class="max-w-2xl mb-16 reveal">
+    <!-- Header -->
+    <header class="max-w-2xl mb-16 reveal">
       <p class="text-xs font-bold tracking-[0.22em] text-emerald-600 uppercase mb-4">What I do</p>
-      <h2 class="text-3xl md:text-5xl font-extrabold tracking-[-0.02em] text-slate-900 leading-[1.12]">
+      <h2 id="services-heading" class="text-3xl md:text-5xl font-extrabold tracking-[-0.02em] text-slate-900 leading-[1.12]">
         Services built around your business goals.
       </h2>
       <p class="mt-5 text-slate-600 text-lg leading-relaxed">
-        Whether you need a website that loads fast, a system that saves your team hours, or AI that keeps your data private — I build it end to end.
+        Whether you need a <strong class="font-semibold text-slate-800">fast, mobile-first website</strong>, a
+        <strong class="font-semibold text-slate-800">private AI system</strong>, or a
+        <strong class="font-semibold text-slate-800">scalable backend API</strong> — I build it end to end.
+        Based in Lahore, working with clients across Pakistan, Europe, and the United States.
       </p>
-    </div>
+    </header>
 
     <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
 
-      <div class="svc-card lift reveal bg-white rounded-2xl border border-slate-200 p-7 hover:border-emerald-300 hover:shadow-card group">
-        <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-5 group-hover:bg-emerald-500 transition-colors duration-300">
+      <!-- 01 — Business Websites -->
+      <article class="svc-card lift reveal bg-white rounded-2xl border border-slate-200 p-7 hover:border-emerald-300 hover:shadow-card group"
+               itemscope itemtype="https://schema.org/Service" itemprop="itemListElement">
+        <meta itemprop="areaServed" content="Worldwide" />
+        <meta itemprop="provider" content="Moazzam Ali" />
+        <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-5 group-hover:bg-emerald-500 transition-colors duration-300" aria-hidden="true">
           <svg class="w-5 h-5 text-emerald-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
         </div>
-        <h3 class="font-bold text-slate-900 text-[17px] tracking-tight">Business Websites</h3>
-        <p class="mt-2.5 text-slate-600 text-[15px] leading-relaxed">Fast, mobile-first websites built to convert visitors into customers. React, Next.js, or WordPress.</p>
-      </div>
+        <h3 class="font-bold text-slate-900 text-[17px] tracking-tight" itemprop="name">Business Websites</h3>
+        <p class="mt-2.5 text-slate-600 text-[15px] leading-relaxed" itemprop="description">
+          Fast, mobile-first, SEO-ready websites built to convert visitors into customers.
+          React, Next.js, or WordPress — fully responsive and optimized for Core Web Vitals.
+        </p>
+      </article>
 
-      <div class="svc-card lift reveal d1 bg-white rounded-2xl border border-slate-200 p-7 hover:border-emerald-300 hover:shadow-card group">
-        <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-5 group-hover:bg-emerald-500 transition-colors duration-300">
+      <!-- 02 — AI Chatbots & Assistants -->
+      <article class="svc-card lift reveal d1 bg-white rounded-2xl border border-slate-200 p-7 hover:border-emerald-300 hover:shadow-card group"
+               itemscope itemtype="https://schema.org/Service" itemprop="itemListElement">
+        <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-5 group-hover:bg-emerald-500 transition-colors duration-300" aria-hidden="true">
           <svg class="w-5 h-5 text-emerald-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4-.8L3 21l1.4-4.2A7.9 7.9 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
         </div>
-        <h3 class="font-bold text-slate-900 text-[17px] tracking-tight">AI Chatbots & Assistants</h3>
-        <p class="mt-2.5 text-slate-600 text-[15px] leading-relaxed">Custom chatbots trained on your business data. Handle enquiries and qualify leads 24/7.</p>
-      </div>
+        <h3 class="font-bold text-slate-900 text-[17px] tracking-tight" itemprop="name">AI Chatbots &amp; Assistants</h3>
+        <p class="mt-2.5 text-slate-600 text-[15px] leading-relaxed" itemprop="description">
+          Custom AI chatbots trained on your own business data — including private document AI that runs
+          fully offline. Handle enquiries and qualify leads 24/7 without sending data to third parties.
+        </p>
+      </article>
 
-      <div class="svc-card lift reveal d2 bg-white rounded-2xl border border-slate-200 p-7 hover:border-emerald-300 hover:shadow-card group">
-        <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-5 group-hover:bg-emerald-500 transition-colors duration-300">
+      <!-- 03 — API & Backend Services -->
+      <article class="svc-card lift reveal d2 bg-white rounded-2xl border border-slate-200 p-7 hover:border-emerald-300 hover:shadow-card group"
+               itemscope itemtype="https://schema.org/Service" itemprop="itemListElement">
+        <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-5 group-hover:bg-emerald-500 transition-colors duration-300" aria-hidden="true">
           <svg class="w-5 h-5 text-emerald-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5v14M8 8l-4 4 4 4M16 8l4 4-4 4"/>
           </svg>
         </div>
 
-        <h3 class="font-bold text-slate-900 text-[17px] tracking-tight">API &amp; Backend Services</h3>
+        <h3 class="font-bold text-slate-900 text-[17px] tracking-tight" itemprop="name">API &amp; Backend Services</h3>
 
-        <p class="mt-2.5 text-slate-600 text-[15px] leading-relaxed">
-          Production-grade APIs and backends built with FastAPI, Node.js, and Django. Auth, databases, integrations, and clear documentation — designed to scale.
+        <p class="mt-2.5 text-slate-600 text-[15px] leading-relaxed" itemprop="description">
+          Production-grade REST APIs and backends built with FastAPI, Node.js, and Django.
+          Authentication, databases, third-party integrations, and clear documentation — designed to scale.
         </p>
 
-        <div class="mt-4 flex flex-wrap gap-2">
+        <div class="mt-4 flex flex-wrap gap-2" aria-label="Technologies used">
           <span class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-bold tracking-wide text-slate-700">FastAPI</span>
           <span class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-bold tracking-wide text-slate-700">Node.js</span>
           <span class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-bold tracking-wide text-slate-700">Django</span>
         </div>
-      </div>
+      </article>
 
-      <div class="svc-card lift reveal bg-white rounded-2xl border border-slate-200 p-7 hover:border-emerald-300 hover:shadow-card group">
-        <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-5 group-hover:bg-emerald-500 transition-colors duration-300">
+      <!-- 04 — CRM & Automation -->
+      <article class="svc-card lift reveal bg-white rounded-2xl border border-slate-200 p-7 hover:border-emerald-300 hover:shadow-card group"
+               itemscope itemtype="https://schema.org/Service" itemprop="itemListElement">
+        <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-5 group-hover:bg-emerald-500 transition-colors duration-300" aria-hidden="true">
           <svg class="w-5 h-5 text-emerald-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
         </div>
-        <h3 class="font-bold text-slate-900 text-[17px] tracking-tight">CRM & Automation</h3>
-        <p class="mt-2.5 text-slate-600 text-[15px] leading-relaxed">GoHighLevel and HubSpot setup, white-label customization, and workflow automation that saves hours.</p>
-      </div>
+        <h3 class="font-bold text-slate-900 text-[17px] tracking-tight" itemprop="name">CRM &amp; Automation</h3>
+        <p class="mt-2.5 text-slate-600 text-[15px] leading-relaxed" itemprop="description">
+          GoHighLevel and HubSpot setup, white-label CRM customization, and workflow automation
+          that saves your team hours every week.
+        </p>
+      </article>
 
-      <div class="svc-card lift reveal d1 bg-white rounded-2xl border border-slate-200 p-7 hover:border-emerald-300 hover:shadow-card group">
-        <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-5 group-hover:bg-emerald-500 transition-colors duration-300">
+      <!-- 05 — Data Dashboards & Analytics -->
+      <article class="svc-card lift reveal d1 bg-white rounded-2xl border border-slate-200 p-7 hover:border-emerald-300 hover:shadow-card group"
+               itemscope itemtype="https://schema.org/Service" itemprop="itemListElement">
+        <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-5 group-hover:bg-emerald-500 transition-colors duration-300" aria-hidden="true">
           <svg class="w-5 h-5 text-emerald-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
         </div>
-        <h3 class="font-bold text-slate-900 text-[17px] tracking-tight">Data Dashboards & Analytics</h3>
-        <p class="mt-2.5 text-slate-600 text-[15px] leading-relaxed">Turn messy spreadsheets and databases into clean dashboards your team can actually use.</p>
-      </div>
+        <h3 class="font-bold text-slate-900 text-[17px] tracking-tight" itemprop="name">Data Dashboards &amp; Analytics</h3>
+        <p class="mt-2.5 text-slate-600 text-[15px] leading-relaxed" itemprop="description">
+          Turn messy spreadsheets and databases into clean, decision-ready dashboards your team can
+          actually use. Built with React, FastAPI, and PostgreSQL.
+        </p>
+      </article>
 
-      <div class="svc-card lift reveal d2 bg-white rounded-2xl border border-slate-200 p-7 hover:border-emerald-300 hover:shadow-card group">
-        <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-5 group-hover:bg-emerald-500 transition-colors duration-300">
-          <svg class="w-5 h-5 text-emerald-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
-        </div>
-        <h3 class="font-bold text-slate-900 text-[17px] tracking-tight">Custom Web Apps & APIs</h3>
-        <p class="mt-2.5 text-slate-600 text-[15px] leading-relaxed">Portals, internal tools, and backends built with FastAPI, React, and PostgreSQL. Scalable and maintainable.</p>
-      </div>
+<article class="svc-card lift reveal d2 bg-white rounded-2xl border border-slate-200 p-7 hover:border-emerald-300 hover:shadow-card group"
+         itemscope itemtype="https://schema.org/Service" itemprop="itemListElement">
+  <meta itemprop="areaServed" content="Worldwide" />
+  <meta itemprop="provider" content="Moazzam Ali" />
+  <meta itemprop="serviceType" content="Search Engine Optimization (SEO) Services" />
+
+  <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-5 group-hover:bg-emerald-500 transition-colors duration-300" aria-hidden="true">
+    <svg class="w-5 h-5 text-emerald-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"/></svg>
+  </div>
+
+  <h3 class="font-bold text-slate-900 text-[17px] tracking-tight" itemprop="name">
+    SEO Services &amp; Search Optimization
+  </h3>
+
+  <p class="mt-2.5 text-slate-600 text-[15px] leading-relaxed" itemprop="description">
+    Search engine optimization (SEO) services that help businesses rank higher on Google,
+    attract qualified organic traffic, and turn visibility into leads. From
+    <strong class="font-semibold text-slate-800">technical SEO audits</strong>,
+    <strong class="font-semibold text-slate-800">on-page optimization</strong>,
+    and <strong class="font-semibold text-slate-800">keyword research</strong>
+    to <strong class="font-semibold text-slate-800">local SEO</strong>,
+    <strong class="font-semibold text-slate-800">link building</strong>, and
+    <strong class="font-semibold text-slate-800">content strategy</strong> — every campaign is built on data, not guesswork.
+  </p>
+
+
+</article>
 
     </div>
   </div>
+
+  <!-- ── Structured Data for Search Engines ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Freelance Services — Web Development, AI, Backend & Automation",
+    "description": "End-to-end freelance services by Moazzam Ali: business websites, AI chatbots, API/backend development, CRM automation, and data analytics.",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Service",
+          "name": "Business Websites",
+          "description": "Fast, mobile-first, SEO-ready websites built with React, Next.js, or WordPress.",
+          "provider": { "@type": "Person", "name": "Moazzam Ali" },
+          "areaServed": "Worldwide"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Service",
+          "name": "AI Chatbots & Assistants",
+          "description": "Custom AI chatbots and private document AI systems trained on your own business data.",
+          "provider": { "@type": "Person", "name": "Moazzam Ali" },
+          "areaServed": "Worldwide"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Service",
+          "name": "API & Backend Services",
+          "description": "Production-grade REST APIs and backends built with FastAPI, Node.js, and Django.",
+          "provider": { "@type": "Person", "name": "Moazzam Ali" },
+          "areaServed": "Worldwide"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Service",
+          "name": "CRM & Automation",
+          "description": "GoHighLevel and HubSpot setup, white-label customization, and workflow automation.",
+          "provider": { "@type": "Person", "name": "Moazzam Ali" },
+          "areaServed": "Worldwide"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "Service",
+          "name": "Data Dashboards & Analytics",
+          "description": "Decision-ready dashboards and analytics built with React, FastAPI, and PostgreSQL.",
+          "provider": { "@type": "Person", "name": "Moazzam Ali" },
+          "areaServed": "Worldwide"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "Service",
+          "name": "Custom Web Apps & APIs",
+          "description": "Client portals, internal tools, SaaS platforms, and scalable backends.",
+          "provider": { "@type": "Person", "name": "Moazzam Ali" },
+          "areaServed": "Worldwide"
+        }
+      }
+    ]
+  }
+  </script>
 </section>
 
 <!-- ══════════════════ INFRASTRUCTURE ══════════════════ -->
